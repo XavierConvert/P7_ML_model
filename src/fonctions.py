@@ -1,21 +1,19 @@
-
+from sklearn.metrics import accuracy_score,precision_score,recall_score, f1_score,roc_auc_score
+import pandas as pd
+import numpy as np
 
 def dupl(df):
     nDupl = df.duplicated().sum()
-    print (f'Le dataset contient {nDupl} doublon(s)')
-    
-# from sklearn.metrics import *
-    
+    print (f'Le dataset contient {nDupl} doublon(s)')   
+   
 def print_score(y_test,y_pred):
-    '''Fonction permettant les différents scores pertinents pour classification'''
+    '''Fonction permettant d'afficher les différents scores pertinents pour la classification'''
     print(f'Accuracy score = {accuracy_score(y_test, y_pred)}')
     print(f'Precision score = {precision_score(y_test, y_pred)}')
     print (f'Recall score = {recall_score(y_test,y_pred)}')
     print (f'F1 score = {f1_score(y_test,y_pred)}')
     print (f'ROC AUC score = {roc_auc_score(y_test,y_pred)}')   
     
-# import pandas as pd
-
 def result(grid, log_target=0,transf_feat=0, features=''):
     ''' Fonction retournant un dataframe res recensant les différents résultats du GridSearchCv passé en fonction des paramétres utilisés'''
     res = pd.DataFrame(grid.cv_results_).round(2)
@@ -31,10 +29,7 @@ def result(grid, log_target=0,transf_feat=0, features=''):
     
     return res#.sort_values("", ascending =True)
 
-
-
-
-def decomposition_modele(modele, X_train,X_test,y_train,):
+def decomposition_modele(best_model, X_train,X_test,y_train,):
     '''
     Fonction permettant de décomposer un modèle (pipeline) imbalanced avec d'un côté le preprocessing et d'un autre côté l'estimateur
     Le but étant de pouvoir gérer la feature importance en conservant le nom des colonnes de X_train
@@ -70,7 +65,7 @@ def decomposition_modele(modele, X_train,X_test,y_train,):
         X_tr=best_model[:-1].fit_transform(X_train)
         X_tr_transf=pd.DataFrame(X_tr, columns=X_train.columns)
     
-        # Preprocessing y_train
+        # Preprocessing X_test
     
         X_te_transf=best_model[:-1].fit_transform(X_test)
         X_te_transf=pd.DataFrame(X_te_transf, columns=X_train.columns)
@@ -81,7 +76,6 @@ def decomposition_modele(modele, X_train,X_test,y_train,):
     # Entrainement estimateur? A faire en dehors de la fonction
     
     #return X_tr,B,best_model[-1].fit(X_tr,B)
-
 
 def calcul_gain_unit(ser, lost_coeff =0.3, taux=0.05): #y_true, y_pred
     
@@ -106,8 +100,6 @@ def calcul_gain_total(df):
         df['Gain'].iloc[i]=calcul_gain_unit(df.iloc[i].T)
     return round(df['Gain'].sum(),2)
 
-
-
 def calcul_gain_gross(ser, lost_coeff =0.3, taux=0.05): #y_true, y_pred
     
     if ser['predictions']:
@@ -119,7 +111,6 @@ def calcul_gain_gross(ser, lost_coeff =0.3, taux=0.05): #y_true, y_pred
     if ser['y_true']: # ==1 prêt accordé à tort : perte K  - vente des biens
         return round(-ser['AMT_CREDIT']-lost_coeff * ser['AMT_GOODS_PRICE'],2)      
     
- 
 def calcul_gain_gross_total(df):
     gain=[]
     gain_total = 0
@@ -130,8 +121,6 @@ def calcul_gain_gross_total(df):
         gain_total+=gain[i]
     return round(gain_total,2)    
 
-
-
 def calcul_gain_proba_unit(ser,seuil=0.50, lost_coeff =0.3, taux=0.05): 
     
     if ser['proba_0'] < seuil:
@@ -139,9 +128,7 @@ def calcul_gain_proba_unit(ser,seuil=0.50, lost_coeff =0.3, taux=0.05):
             
     #if ser['predictions']:
     #    return 0
-    
-    
-    
+        
     if not ser['y_true']: # == 0 > prêt accordé et remboursé: gains = interets
         #Version où les interets sont perçus sur toutes les annuités
         #return round(ser['AMT_CREDIT']*taux*ser['nb_annuité'],2)
@@ -151,10 +138,7 @@ def calcul_gain_proba_unit(ser,seuil=0.50, lost_coeff =0.3, taux=0.05):
     
     if ser['y_true']: # ==1 prêt accordé à tort : perte K  - vente des biens
         return round(-ser['AMT_CREDIT']-lost_coeff * ser['AMT_GOODS_PRICE'],2)
-    
-    
-    
-    
+       
 def calcul_seuil_optimal(df):
     best_thresh=pd.DataFrame(columns=['threshold','Gain_total'])
     #global best_thresh
