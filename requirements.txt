@@ -1,0 +1,10 @@
+pandas
+numpy
+matplotlib
+seaborn
+chardet
+missingno
+scikit-learn
+imbalanced-learn
+lightgbm
+xgboost
