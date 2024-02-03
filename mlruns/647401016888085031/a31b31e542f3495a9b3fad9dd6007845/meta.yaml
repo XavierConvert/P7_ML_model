@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/a31b31e542f3495a9b3fad9dd6007845/artifacts
+deleted_time: 1706974784556
 end_time: 1706886914110
 entry_point_name: ''
 experiment_id: '647401016888085031'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: a31b31e542f3495a9b3fad9dd6007845
 run_name: agreeable-sloth-473
 run_uuid: a31b31e542f3495a9b3fad9dd6007845

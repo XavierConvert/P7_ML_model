@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/372070b04a944de3bc24c7e352ca410e/artifacts
+deleted_time: 1706974784554
 end_time: 1706886282617
 entry_point_name: ''
 experiment_id: '647401016888085031'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 372070b04a944de3bc24c7e352ca410e
 run_name: bold-roo-960
 run_uuid: 372070b04a944de3bc24c7e352ca410e
