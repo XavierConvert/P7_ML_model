@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/a003d5ad2a004f6885d0d6cb83802e1a/artifacts
+deleted_time: 1707121594297
+end_time: 1707121434899
+entry_point_name: ''
+experiment_id: '647401016888085031'
+lifecycle_stage: deleted
+run_id: a003d5ad2a004f6885d0d6cb83802e1a
+run_name: '9'
+run_uuid: a003d5ad2a004f6885d0d6cb83802e1a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707121429886
+status: 3
+tags: []
+user_id: xavie

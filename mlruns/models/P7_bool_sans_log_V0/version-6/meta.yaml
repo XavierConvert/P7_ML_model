@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1707122933286
+current_stage: None
+description: ''
+last_updated_timestamp: 1707122933286
+name: P7_bool_sans_log_V0
+run_id: 48d76323952f411f9a2110da11126745
+run_link: ''
+source: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/48d76323952f411f9a2110da11126745/artifacts/P7_bool_sans_log_V0
+status: READY
+status_message: null
+storage_location: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/48d76323952f411f9a2110da11126745/artifacts/P7_bool_sans_log_V0
+user_id: null
+version: 6

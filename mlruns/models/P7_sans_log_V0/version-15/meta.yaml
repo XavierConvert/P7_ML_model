@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1707121698630
+current_stage: None
+description: ''
+last_updated_timestamp: 1707121698630
+name: P7_sans_log_V0
+run_id: 0387da9a6caf4882ba545d70d0691b10
+run_link: ''
+source: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/0387da9a6caf4882ba545d70d0691b10/artifacts/P7_sans_log_V0
+status: READY
+status_message: null
+storage_location: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/0387da9a6caf4882ba545d70d0691b10/artifacts/P7_sans_log_V0
+user_id: null
+version: 15

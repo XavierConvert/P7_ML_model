@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1707123185482
+current_stage: None
+description: ''
+last_updated_timestamp: 1707123185482
+name: P7_no_cat_feat_V0
+run_id: 91cf515649bf4203a7bf9769102f8441
+run_link: ''
+source: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/91cf515649bf4203a7bf9769102f8441/artifacts/P7_no_cat_feat_V0
+status: READY
+status_message: null
+storage_location: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/91cf515649bf4203a7bf9769102f8441/artifacts/P7_no_cat_feat_V0
+user_id: null
+version: 13
