@@ -1,0 +1,4 @@
+ColumnTransformer(transformers=[('num',
+                                 FunctionTransformer(func=<ufunc 'log1p'>),
+                                 ['AMT_INCOME_TOTAL', 'AMT_CREDIT',
+                                  'AMT_ANNUITY'])])
