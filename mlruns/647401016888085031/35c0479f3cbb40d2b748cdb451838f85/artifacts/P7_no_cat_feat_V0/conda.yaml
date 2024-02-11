@@ -1,9 +1,0 @@
-channels:
-- defaults
-dependencies:
-- python=3.9.13
-- scikit-learn>=0.21.3
-- pip:
-  - mlflow==2.10.0
-  - xgboost==1.7.5
-name: mlflow-env
