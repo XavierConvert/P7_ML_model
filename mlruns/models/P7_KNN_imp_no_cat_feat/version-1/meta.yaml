@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1707727744753
+current_stage: None
+description: ''
+last_updated_timestamp: 1707727744753
+name: P7_KNN_imp_no_cat_feat
+run_id: e9078729b89e4772afb9acd99a1548bf
+run_link: ''
+source: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/e9078729b89e4772afb9acd99a1548bf/artifacts/P7_KNN_imp_no_cat_feat
+status: READY
+status_message: null
+storage_location: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/e9078729b89e4772afb9acd99a1548bf/artifacts/P7_KNN_imp_no_cat_feat
+user_id: null
+version: 1

@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1707732735673
+current_stage: None
+description: ''
+last_updated_timestamp: 1707732735673
+name: P7_feat_eng_V2
+run_id: 28d16b7799854c628832b66152e1cb25
+run_link: ''
+source: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/28d16b7799854c628832b66152e1cb25/artifacts/P7_feat_eng_V2
+status: READY
+status_message: null
+storage_location: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/28d16b7799854c628832b66152e1cb25/artifacts/P7_feat_eng_V2
+user_id: null
+version: 22

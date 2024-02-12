@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/f92f3398613f48c7b928b24873840bf5/artifacts
+end_time: 1707732745807
+entry_point_name: ''
+experiment_id: '647401016888085031'
+lifecycle_stage: active
+run_id: f92f3398613f48c7b928b24873840bf5
+run_name: '32'
+run_uuid: f92f3398613f48c7b928b24873840bf5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707732744972
+status: 3
+tags: []
+user_id: xavie
