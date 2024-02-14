@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/37ae0b39dcb247c2a62ae5b04bfc3c2e/artifacts
+deleted_time: 1707909518228
 end_time: 1707732750219
 entry_point_name: ''
 experiment_id: '647401016888085031'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 37ae0b39dcb247c2a62ae5b04bfc3c2e
 run_name: '37'
 run_uuid: 37ae0b39dcb247c2a62ae5b04bfc3c2e

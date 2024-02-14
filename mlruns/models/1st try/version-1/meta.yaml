@@ -1,0 +1,16 @@
+aliases: []
+creation_timestamp: 1707909237451
+current_stage: None
+description: ''
+last_updated_timestamp: 1707909237451
+name: 1st try
+run_id: 3999f3e9f2144d4b8ef983fe236bcebf
+run_link: ''
+source: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/3999f3e9f2144d4b8ef983fe236bcebf/artifacts/1st
+  try
+status: READY
+status_message: null
+storage_location: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/3999f3e9f2144d4b8ef983fe236bcebf/artifacts/1st
+  try
+user_id: null
+version: 1

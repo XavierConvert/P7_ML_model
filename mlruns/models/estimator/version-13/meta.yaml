@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1707909090460
+current_stage: None
+description: ''
+last_updated_timestamp: 1707909090460
+name: estimator
+run_id: 2aabfbf2364141838b3ccee9d5719e45
+run_link: ''
+source: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/2aabfbf2364141838b3ccee9d5719e45/artifacts/estimator
+status: READY
+status_message: null
+storage_location: file:///C:/Users/xavie/P7/P7_ML_model/mlruns/647401016888085031/2aabfbf2364141838b3ccee9d5719e45/artifacts/estimator
+user_id: null
+version: 13
