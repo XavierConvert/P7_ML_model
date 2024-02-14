@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/631002368067328402/795aac115af7433d977cf0bbf3ea4699/artifacts
+deleted_time: 1707947916326
+end_time: 1707947709610
+entry_point_name: ''
+experiment_id: '631002368067328402'
+lifecycle_stage: deleted
+run_id: 795aac115af7433d977cf0bbf3ea4699
+run_name: likeable-fish-837
+run_uuid: 795aac115af7433d977cf0bbf3ea4699
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707947709470
+status: 4
+tags: []
+user_id: xavie
