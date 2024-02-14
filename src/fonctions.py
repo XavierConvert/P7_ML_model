@@ -226,7 +226,7 @@ def log_run(gridsearch: GridSearchCV, experiment_name: str, model_name: str, run
 			print("runID: %s" % run_id)
 			mlflow.end_run()
    
-def log_results(gridsearch: GridSearchCV, experiment_name, model_name, tags={}): #, log_only_best=False):
+def log_results(gridsearch: GridSearchCV, experiment_name, model_name, tags={}, log_only_best=False):
     
     """Logging of cross validation results to mlflow tracking server
     Args:
@@ -245,13 +245,13 @@ def log_results(gridsearch: GridSearchCV, experiment_name, model_name, tags={}):
             ]
         }
 
-    #best = gridsearch.best_index_
+    best = gridsearch.best_index_
     mlflow.set_tracking_uri(uri="http://127.0.0.1:8080")
     mlflow.set_experiment(experiment_name)
 
-    #if(log_only_best):
-    #    log_run(gridsearch, experiment_name, model_name, best, tags) 
-    #else:
-    for i in range(len(gridsearch.cv_results_['params'])):
-        log_run(gridsearch, experiment_name, model_name, i, conda_env, tags) 
+    if(log_only_best):
+        log_run(gridsearch, experiment_name, model_name, best, tags) 
+    else:
+        for i in range(len(gridsearch.cv_results_['params'])):
+            log_run(gridsearch, experiment_name, model_name, i, conda_env, tags) 
         
