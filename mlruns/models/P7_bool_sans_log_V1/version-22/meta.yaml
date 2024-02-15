@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1708034146246
+current_stage: None
+description: ''
+last_updated_timestamp: 1708034146246
+name: P7_bool_sans_log_V1
+run_id: c8590ca3420d49f29e96b75295a13263
+run_link: ''
+source: mlflow-artifacts:/574185881253894453/c8590ca3420d49f29e96b75295a13263/artifacts/P7_bool_sans_log_V1
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/574185881253894453/c8590ca3420d49f29e96b75295a13263/artifacts/P7_bool_sans_log_V1
+user_id: null
+version: 22
