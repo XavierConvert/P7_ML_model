@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1708013154743
+current_stage: None
+description: ''
+last_updated_timestamp: 1708013154743
+name: P7_no_cat_feat_V1
+run_id: 329f3aafb83e440e907c0cfc1fa65c47
+run_link: ''
+source: mlflow-artifacts:/773495734063755611/329f3aafb83e440e907c0cfc1fa65c47/artifacts/P7_no_cat_feat_V1
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/773495734063755611/329f3aafb83e440e907c0cfc1fa65c47/artifacts/P7_no_cat_feat_V1
+user_id: null
+version: 18

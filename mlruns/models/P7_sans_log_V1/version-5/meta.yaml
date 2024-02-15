@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1708012650323
+current_stage: None
+description: ''
+last_updated_timestamp: 1708012650323
+name: P7_sans_log_V1
+run_id: 037407650c374a89a703c74c7fb2820e
+run_link: ''
+source: mlflow-artifacts:/773495734063755611/037407650c374a89a703c74c7fb2820e/artifacts/P7_sans_log_V1
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/773495734063755611/037407650c374a89a703c74c7fb2820e/artifacts/P7_sans_log_V1
+user_id: null
+version: 5

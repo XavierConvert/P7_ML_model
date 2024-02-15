@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1708012780217
+current_stage: None
+description: ''
+last_updated_timestamp: 1708012780217
+name: P7_bool_with_log_V1
+run_id: bdad13862e644f9e8a0d3a274434083e
+run_link: ''
+source: mlflow-artifacts:/773495734063755611/bdad13862e644f9e8a0d3a274434083e/artifacts/P7_bool_with_log_V1
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/773495734063755611/bdad13862e644f9e8a0d3a274434083e/artifacts/P7_bool_with_log_V1
+user_id: null
+version: 11

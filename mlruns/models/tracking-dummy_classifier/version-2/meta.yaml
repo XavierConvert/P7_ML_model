@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1708012272101
+current_stage: None
+description: ''
+last_updated_timestamp: 1708012272101
+name: tracking-dummy_classifier
+run_id: e683aa4b01574841991364cfdb34167e
+run_link: ''
+source: mlflow-artifacts:/773495734063755611/e683aa4b01574841991364cfdb34167e/artifacts/pret_a_depenser
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/773495734063755611/e683aa4b01574841991364cfdb34167e/artifacts/pret_a_depenser
+user_id: null
+version: 2
