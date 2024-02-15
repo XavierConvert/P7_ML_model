@@ -1,4 +1,4 @@
-from sklearn.metrics import accuracy_score,precision_score,recall_score, f1_score,roc_auc_score, make_scorer
+from sklearn.metrics import accuracy_score,precision_score,recall_score, f1_score,roc_auc_score, make_scorer, confusion_matrix
 from sklearn.model_selection import GridSearchCV
 import pandas as pd
 import numpy as np
@@ -54,7 +54,7 @@ def decomposition_modele(best_model, X_train,X_test,y_train,):
     Le but étant de pouvoir gérer la feature importance en conservant le nom des colonnes de X_train
     
     Arguments:
-    - modele: de type pipeline
+    - best_model: de type pipeline
     - X_train
     - X_test
     - y_train (necessaire pour le resampling)
@@ -141,7 +141,13 @@ def calcul_gain_gross_total(df):
     return round(gain_total,2)    
 
 def calcul_gain_proba_unit(ser,seuil=0.50, lost_coeff =0.3, taux=0.05): 
-    
+    """ Sur base predict_proba du modèle retenu, fonction permettant le gain financier sur un crédit accordé.
+    Arg:
+    - ser: proba_0 de predict_proba
+    - seuil: défualté à 0.5. Sera ajusté via la fonction calcul_seuil_optimal()
+    - lost_coeff: coeff à appliquer au prix du bien financé: sert à minimiser la perte en cas de non remboursement du crédit
+    - taux (= 0.05 par défaut): taux d'interet fictif du crédit
+    """    
     if ser['proba_0'] < seuil:
         return 0    
             
@@ -159,9 +165,13 @@ def calcul_gain_proba_unit(ser,seuil=0.50, lost_coeff =0.3, taux=0.05):
         return round(-ser['AMT_CREDIT']-lost_coeff * ser['AMT_GOODS_PRICE'],2)
        
 def calcul_seuil_optimal(df):
-    best_thresh=pd.DataFrame(columns=['threshold','Gain_total'])
-    #global best_thresh
+    """FOnction permettant de calculer le seuil à partir duquel on doit considérer 
+    que l'on perd de l'argent si un crédité est accordé à tort
     
+    Basé sur la fonction calcul_gain_proba_unit décrite plus haut """ 
+    
+    best_thresh=pd.DataFrame(columns=['threshold','Gain_total'])
+       
     for thr,j in zip(np.arange(0,1,0.05),range(len(np.arange(0,1,0.05)))): 
         gain=[]
         gain_total = 0
@@ -184,7 +194,10 @@ def my_specificity_score(y_true,y_pred):
 
 
 def log_run(gridsearch: GridSearchCV, experiment_name: str, model_name: str, run_index: int, conda_env, tags={}): #
-		"""Logging of cross validation results to mlflow tracking server
+		"""
+        Récupéré de liorshk/mlflow_gridsearch.py puis adapté pour mon notebook
+        
+        Logging of cross validation results to mlflow tracking server
 		
 		Args:
 			experiment_name (str): experiment name
@@ -235,7 +248,10 @@ def log_run(gridsearch: GridSearchCV, experiment_name: str, model_name: str, run
    
 def log_results(gridsearch: GridSearchCV, experiment_name, model_name, tags={}, log_only_best=False):
     
-    """Logging of cross validation results to mlflow tracking server
+    """
+    Récupéré de liorshk/mlflow_gridsearch.py puis adapté pour mon notebook
+    
+    Logging of cross validation results to mlflow tracking server
     Args:
         experiment_name (str): experiment name
         model_name (str): Name of the model
