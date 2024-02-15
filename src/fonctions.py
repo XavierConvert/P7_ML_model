@@ -1,4 +1,4 @@
-from sklearn.metrics import accuracy_score,precision_score,recall_score, f1_score,roc_auc_score
+from sklearn.metrics import accuracy_score,precision_score,recall_score, f1_score,roc_auc_score, make_scorer
 from sklearn.model_selection import GridSearchCV
 import pandas as pd
 import numpy as np
@@ -175,6 +175,13 @@ def calcul_seuil_optimal(df):
         best_thresh=pd.concat([best_thresh,tmp],axis=0,ignore_index=True)
         
     return best_thresh #gain_total
+
+def my_specificity_score(y_true,y_pred):
+    """Custom metric to calculate specificity score. Used in GridSearchCV scoring"""
+    tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
+    my_specificity = tn / (tn + fp)
+    return my_specificity
+
 
 def log_run(gridsearch: GridSearchCV, experiment_name: str, model_name: str, run_index: int, conda_env, tags={}): #
 		"""Logging of cross validation results to mlflow tracking server
