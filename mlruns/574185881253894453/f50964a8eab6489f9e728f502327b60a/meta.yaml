@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/574185881253894453/f50964a8eab6489f9e728f502327b60a/artifacts
+deleted_time: 1708074037123
+end_time: 1708072721521
+entry_point_name: ''
+experiment_id: '574185881253894453'
+lifecycle_stage: deleted
+run_id: f50964a8eab6489f9e728f502327b60a
+run_name: '14'
+run_uuid: f50964a8eab6489f9e728f502327b60a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1708072720309
+status: 3
+tags: []
+user_id: xavie
