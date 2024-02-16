@@ -273,7 +273,7 @@ def log_results(gridsearch: GridSearchCV, experiment_name, model_name, tags={}, 
     mlflow.set_experiment(experiment_name)
 
     if(log_only_best):
-        log_run(gridsearch, experiment_name, model_name, best, tags) 
+        log_run(gridsearch, experiment_name, model_name, best, conda_env, tags) 
     else:
         for i in range(len(gridsearch.cv_results_['params'])):
             log_run(gridsearch, experiment_name, model_name, i, conda_env, tags) 

@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1708076440161
+current_stage: None
+description: ''
+last_updated_timestamp: 1708076440161
+name: P7_no_cat_feat_red_V2_KNNImp
+run_id: fa9c11d94970438dbe3c5c54ba11dc02
+run_link: ''
+source: mlflow-artifacts:/574185881253894453/fa9c11d94970438dbe3c5c54ba11dc02/artifacts/P7_no_cat_feat_red_V2_KNNImp
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/574185881253894453/fa9c11d94970438dbe3c5c54ba11dc02/artifacts/P7_no_cat_feat_red_V2_KNNImp
+user_id: null
+version: 1
