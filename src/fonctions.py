@@ -48,6 +48,55 @@ def result(grid, log_target=0,transf_feat=0, features=''):
     
     return res#.sort_values("", ascending =True)
 
+def decomposition_modele(modele, X_train,X_test,y_train,):
+    '''  
+    Fonction permettant de décomposer un modèle (pipeline) imbalanced ou non afin de dérouler les différents étapes de preprocessing sans la partie estimator.
+    Le but étant de pouvoir gérer la feature importance en conservant le nom des colonnes de X_train
+    
+    ATTENTION: cette fonction ne fonctionne qu'avec un type précis de pipeline davec les étapes suivantes:
+    - le 1er step (non obligatoire) de UnderSampling (uniquement RandomUnderSampler())
+    - un ou plusieurs steps de transformation (scaler/imputer)
+    - le dernier correspo,d à l'estimateur
+    
+    Arguments:
+    - modele: de type pipeline
+    - X_train
+    - X_test
+    - y_train (necessaire pour le resampling)
+    '''
+        
+    # Si modèle imbalanced:
+    
+    if str(modele[0]) == 'RandomUnderSampler()':
+        
+        #Sampling
+        
+        X_tr, y_train_rus=modele[0].fit_resample(X_train,y_train)
+    
+        # Preprocessing X_train
+    
+        X_tr=modele[1:-1].fit_transform(X_tr)
+        X_tr_transf=pd.DataFrame(X_tr, columns=X_train.columns)
+    
+        # Preprocessing X_test
+    
+        X_te_transf=modele[1:-1].fit_transform(X_test)
+        X_te_transf=pd.DataFrame(X_te_transf, columns=X_train.columns)
+        
+    else: # si classes équilibrées
+        
+        y_train_rus = y_train
+        X_tr=modele[:-1].fit_transform(X_train)
+        X_tr_transf=pd.DataFrame(X_tr, columns=X_train.columns)
+    
+        # Preprocessing y_train
+    
+        X_te_transf=modele[:-1].fit_transform(X_test)
+        X_te_transf=pd.DataFrame(X_te_transf, columns=X_train.columns)
+    
+       
+    return X_tr_transf,X_te_transf, y_train_rus
+
 def my_specificity_score(y_true,y_pred):
     """Metric to calculate specificity score. Used in GridSearchCV scoring"""
     tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
