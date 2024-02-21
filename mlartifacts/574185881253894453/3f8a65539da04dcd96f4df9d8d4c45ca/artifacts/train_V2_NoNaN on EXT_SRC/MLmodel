@@ -1,0 +1,20 @@
+artifact_path: train_V2_NoNaN on EXT_SRC
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.0.2
+mlflow_version: 2.10.0
+model_size_bytes: 314182
+model_uuid: 8cf0d986e29c4069a4f95f83d997accc
+run_id: 3f8a65539da04dcd96f4df9d8d4c45ca
+utc_time_created: '2024-02-21 16:18:23.681817'

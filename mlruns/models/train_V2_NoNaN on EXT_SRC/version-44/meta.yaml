@@ -1,0 +1,16 @@
+aliases: []
+creation_timestamp: 1708532302182
+current_stage: None
+description: ''
+last_updated_timestamp: 1708532302182
+name: train_V2_NoNaN on EXT_SRC
+run_id: 945c3a41bd694db9a67195913f9e043e
+run_link: ''
+source: mlflow-artifacts:/574185881253894453/945c3a41bd694db9a67195913f9e043e/artifacts/train_V2_NoNaN
+  on EXT_SRC
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/574185881253894453/945c3a41bd694db9a67195913f9e043e/artifacts/train_V2_NoNaN
+  on EXT_SRC
+user_id: null
+version: 44
